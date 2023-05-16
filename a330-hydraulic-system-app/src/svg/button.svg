@@ -1,0 +1,7 @@
+<svg id="system" width="70" height="70" version="1.1" viewBox="0 0 18.521 18.521" xmlns="http://www.w3.org/2000/svg">
+ <g id="testButton">
+  <rect id="rect858" x="-.0075473" y="6.0587e-8" width="18.521" height="18.521" fill="#4d4d4d" stroke-width="0" style="paint-order:markers stroke fill"/>
+  <text id="text1522" x="1.6432738" y="16.258736" fill="#ffffff" font-family="sans-serif" font-size="3.7103px" stroke-width=".092757" style="line-height:1.25" xml:space="preserve"><tspan id="tspan1520" x="1.6432738" y="16.258736" fill="#ffffff" stroke-width=".092757">BUTTON</tspan></text>
+  <text id="numberTest" x="5.8625145" y="10.471022" fill="#000000" font-family="sans-serif" font-size="10.584px" stroke-width=".26459" style="line-height:1.25" xml:space="preserve"><tspan id="tspan515" x="5.8625145" y="10.471022" stroke-width=".26459">3</tspan></text>
+ </g>
+</svg>

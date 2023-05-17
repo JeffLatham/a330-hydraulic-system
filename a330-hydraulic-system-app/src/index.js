@@ -22,16 +22,16 @@ function getElement(elementID) {
   return element;
 }
 
-// getElements
-function getElements(elements) {
-  const keys = Object.keys(elements);
-  keys.forEach((key) => {
-    elements[key] = getElement(key);
-  });
-}
+// // getElements
+// function getElements(elements) {
+//   const keys = Object.keys(elements);
+//   keys.forEach((key) => {
+//     elements[key] = getElement(key);
+//   });
+// }
 
 // // Default View object
-let defaultView = {
+let hydSystemUI = {
 
   // // SVG element IDs:
   // // These are the names of all relevant SVG element "id" attributes.
@@ -45,6 +45,7 @@ let defaultView = {
   //   // testButton: null,
   // },
 
+  // switches object contains all switch objects
   switches: {
 
     // Switch Names:
@@ -72,6 +73,98 @@ let defaultView = {
       },
     },
 
+    GreenHydEng1PumpSwitch: {
+      type: 'off',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    BlueHydElecPumpOnSwitch: {
+      type: 'on',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    BlueHydElecPumpOffSwitch: {
+      type: 'off',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    BlueHydEng1PumpSwitch: {
+      type: 'off',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    YellowHydElecPumpOnSwitch: {
+      type: 'on',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    YellowHydElecPumpOffSwitch: {
+      type: 'off',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    YellowHydEng2PumpSwitch: {
+      type: 'off',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    GreenHydEng2PumpSwitch: {
+      type: 'off',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    RatSwitch: {
+      type: 'rat',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+  },
+
+  hydPumps: {
+
+    greenEng1HydPump: {
+      on: false,
+      outputPressure: 3000,
+      requirements: [
+        'GreenHydEng1PumpSwitch',
+      ],
+    },
   },
 
   // init Initializes the Tool Bar
@@ -147,8 +240,8 @@ class UI extends React.Component {
   // componentDidMount 
   componentDidMount() {
 
-    // // Initialize imported SVGs
-    defaultView.init();
+    // // Initialize imported SVG
+    hydSystemUI.init();
 
     // Refresh to draw new elements
     this.setState({});
@@ -162,9 +255,7 @@ class UI extends React.Component {
     
     return (
       <div>
-
         <HydSystemUI />
-        
       </div>
     );
   }

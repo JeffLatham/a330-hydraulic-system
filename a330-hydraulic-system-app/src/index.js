@@ -61,7 +61,7 @@ let defaultView = {
   // numberChange
   numberChange: function() {
 
-    defaultView.elements.numberTest.firstChild.textContent = 'T';
+    defaultView.elements.numberTest.firstChild.textContent = 'd4';
   },
 };
 

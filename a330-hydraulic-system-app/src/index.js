@@ -11,7 +11,7 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 
 // Import SVG source files
-import { ReactComponent as TestButton   } from './svg/button.svg'
+import { ReactComponent as HydSystemUI  } from './svg/A330HydSystemUI.svg'
 
 // getElement does the same thing as "document.getElementById()" except 
 // it's also nice enough to tell you if it can't find the element instead 
@@ -33,35 +33,101 @@ function getElements(elements) {
 // // Default View object
 let defaultView = {
 
-  // SVG element IDs:
-  // These are the names of all relevant SVG element "id" attributes.
-  // This app imports the toolbar.svg file and draws it in the browser.
-  // This app then modifies the imported SVG elements on the screen 
-  // based on the element IDs in this object (list). The element "id" 
-  // names in this list must exactly match the "id" attribute for that 
-  // element from the SVG file.
-  elements: {
+  // // SVG element IDs:
+  // // These are the names of all relevant SVG element "id" attributes.
+  // // This app imports the toolbar.svg file and draws it in the browser.
+  // // This app then modifies the imported SVG elements on the screen 
+  // // based on the element IDs in this object (list). The element "id" 
+  // // names in this list must exactly match the "id" attribute for that 
+  // // element from the SVG file.
+  // elements: {
 
-    testButton: null,
-    numberTest: null,
+  //   // testButton: null,
+  // },
+
+  switches: {
+
+    // Switch Names:
+    // These switch names must exactly match the "id" attribute 
+    // for the switch in the imported SVG file. This app imports 
+    // the A330HydSystemUI.svg file and draws it in the browser.
+    // This app then modifies the imported SVG elements on the screen 
+    // based on the switch names listed here.
+
+    GreenHydElecPumpOnSwitch: {
+      type: 'on',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
+    GreenHydElecPumpOffSwitch: {
+      type: 'off',
+      states: {
+        pushed: false,
+        fault:  false,
+        status: false,
+      },
+    },
+
   },
 
   // init Initializes the Tool Bar
   init: function() {
 
-    getElements(this.elements);
+    // getElements(this.elements);
 
-    // Select buttons
-    // this.numberChange();
+    // Initialize buttons
+    const allSwitches = Object.keys(this.switches);
+    allSwitches.forEach((thisSwitch) => {
 
-    // Attach button events
-    this.elements.testButton.addEventListener("click", this.numberChange);
+      // 
+      this.updateSwitch(thisSwitch);
+        
+      // Attach event
+      getElement(thisSwitch+'Button').addEventListener("click", () => this.switchPush(thisSwitch));
+    });
   },
 
-  // numberChange
-  numberChange: function() {
+  updateSwitch: function(switchName) {
 
-    defaultView.elements.numberTest.firstChild.textContent = 'd4';
+    if(this.switches[switchName].type === 'off' || this.switches[switchName].type === 'on') {
+
+      if(this.switches[switchName].states.pushed) {
+        getElement(switchName+'Push').style.display = 'inline';
+      } else {
+        getElement(switchName+'Push').style.display = 'none';
+      }
+  
+      if(this.switches[switchName].type === 'off') {
+        if(this.switches[switchName].states.fault) {
+          getElement(switchName+'Fault').style.display = 'inline';
+        } else {
+          getElement(switchName+'Fault').style.display = 'none';
+        }
+      }
+  
+      if(this.switches[switchName].states.status) {
+        getElement(switchName+'Status').style.display = 'inline';
+      } else {
+        getElement(switchName+'Status').style.display = 'none';
+      }
+    }
+  },
+
+  switchPush: function(switchName) {
+
+    this.switches[switchName].states.pushed = !this.switches[switchName].states.pushed;
+
+    if(this.switches[switchName].states.pushed) {
+      this.switches[switchName].states.status = true;
+    } else {
+      this.switches[switchName].states.status = false;
+    }
+
+    this.updateSwitch(switchName);
   },
 };
 
@@ -97,7 +163,7 @@ class UI extends React.Component {
     return (
       <div>
 
-        <TestButton />
+        <HydSystemUI />
         
       </div>
     );

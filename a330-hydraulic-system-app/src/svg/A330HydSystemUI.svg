@@ -35,17 +35,6 @@
    <path id="RatSwitchCoverOpen" d="m245.8 253.59a.4033.17536 0 00-.4036.17526v1.7312a.57568.25031 0 01-.57567.2503h-.63924a1.3341.58008 0 00-1.3343.58015v5.2133a1.3317.57903 0 001.3317.57902h1.4966a.3597.1564 0 01.35966.15638v.48713a.3597.1564 0 00.35967.15638h5.6622a.3597.1564 0 00.35967-.15638v-.48713a.3597.1564 0 01.35966-.15638h1.4966a1.3317.57903 0 001.3317-.57902v-5.2133a1.3341.58008 0 00-1.3343-.58015h-.63924a.57568.25031 0 01-.57567-.2503v-1.7312a.4033.17536 0 00-.40308-.17526h-3.4262z" stroke-width=".17446px"/>
   </g>
  </g>
- <g id="HydDisplay" transform="matrix(1 0 0 1 -170.25 -305.99)">
-  <rect id="rect82301" x="207.22" y="365.96" width="132.88" height="128.65" ry="0" style="paint-order:markers stroke fill"/>
-  <g font-family="sans-serif">
-   <text id="GreenHydPressureDisplay" x="230.4115" y="396.42419" fill="#00fd3d" font-size="6.0268px" stroke-width=".15067" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan82303" x="230.4115" y="396.42419" fill="#00fd3d" font-family="Arial" font-size="6.0268px" stroke-width=".15067" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3000</tspan></text>
-   <text id="text84743" transform="scale(.88874 1.1252)" x="259.23724" y="345.48444" fill="#fcfdfd" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan84741" x="259.23724" y="345.48444" fill="#fcfdfd" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GREEN</tspan></text>
-   <text id="BlueHydPressureDisplay" x="272.71515" y="396.42419" fill="#00fd3d" font-size="6.0268px" stroke-width=".15067" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan86125" x="272.71515" y="396.42419" fill="#00fd3d" font-family="Arial" font-size="6.0268px" stroke-width=".15067" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3000</tspan></text>
-   <text id="text86131" transform="scale(.88874 1.1252)" x="306.83707" y="345.48444" fill="#fcfdfd" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan86129" x="306.83707" y="345.48444" fill="#fcfdfd" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">BLUE</tspan></text>
-   <text id="YellowHydPressureDisplay" x="315.1106" y="396.42419" fill="#00fd3d" font-size="6.0268px" stroke-width=".15067" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan86133" x="315.1106" y="396.42419" fill="#00fd3d" font-family="Arial" font-size="6.0268px" stroke-width=".15067" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3000</tspan></text>
-   <text id="text86139" transform="scale(.88874 1.1252)" x="354.54016" y="345.48444" fill="#fcfdfd" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan86137" x="354.54016" y="345.48444" fill="#fcfdfd" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">YELLOW</tspan></text>
-  </g>
- </g>
  <g id="GreenHydEng1PumpSwitchButton" transform="matrix(.98773 0 0 .98773 -46.652 -190.62)">
   <path id="path7796" x="77.127907" y="223.12306" width="11.86979" height="11.86979" d="m77.657 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="#333" stroke="#666" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
   <g id="GreenHydEng1PumpSwitchStatus" transform="translate(18.291 -27.745)">
@@ -96,7 +85,7 @@
   <path id="path18250" x="77.127907" y="223.12306" width="11.86979" height="11.86979" d="m77.657 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="none" stroke="#999" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
   <path id="YellowHydEng2PumpSwitchPush" x="77.127907" y="223.12306" width="11.86979" height="11.86979" d="m77.657 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="none" stroke="#1a1a1a" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
  </g>
- <g id="GreenHydEng2PumpSwitchButton" transform="matrix(.98773 0 0 .98773 88.179 -190.62)">
+ <g id="GreenHydEng2PumpSwitchButton" transform="matrix(.98773 0 0 .98773 88.18 -190.62)">
   <path id="path19868" x="77.127907" y="223.12306" width="11.86979" height="11.86979" d="m77.657 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="#333" stroke="#666" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
   <g id="GreenHydEng2PumpSwitchStatus" transform="translate(18.291 -27.745)">
    <path id="path19870" x="60.676998" y="257.50235" width="8.2260761" height="3.486815" d="m60.942 257.5h7.6969a.26458.26458 45 01.26458.26458v2.9576a.26458.26458 135 01-.26458.26458h-7.6969a.26458.26458 45 01-.26458-.26458v-2.9576a.26458.26458 135 01.26458-.26458z" fill="none" stroke="#b5b098" stroke-linecap="square" stroke-width=".26458" style="paint-order:markers stroke fill"/>
@@ -130,6 +119,242 @@
   <g id="YellowHydElecPumpOnSwitchFault" fill="#666">
    <circle id="circle24111" cx="96.765" cy="226.09" r=".90235" style="paint-order:markers stroke fill"/>
    <circle id="circle24113" cx="102.7" cy="226.09" r=".90235" style="paint-order:markers stroke fill"/>
+  </g>
+ </g>
+ <g id="HydECAM" transform="matrix(1 0 0 1 -11.337 -13.268)">
+  <rect id="rect82301" x="50.48" y="70.802" width="128.53" height="128.65" ry="0" style="paint-order:markers stroke fill"/>
+  <g fill="#00fd3d" font-family="sans-serif" font-size="6.0268px" stroke-width=".15067">
+   <text id="GreenHydPressureDisplay" x="73.012413" y="103.97891" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan82303" x="73.012413" y="103.97891" fill="#00fd3d" font-family="Arial" font-size="6.0268px" stroke-width=".15067" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3000</tspan></text>
+   <text id="BlueHydPressureDisplay" x="100.84753" y="101.26105" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan86125" x="100.84753" y="101.26105" fill="#00fd3d" font-family="Arial" font-size="6.0268px" stroke-width=".15067" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3000</tspan></text>
+   <text id="YellowHydPressureDisplay" x="128.34837" y="101.26105" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan86133" x="128.34837" y="101.26105" fill="#00fd3d" font-family="Arial" font-size="6.0268px" stroke-width=".15067" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3000</tspan></text>
+  </g>
+  <g fill="none" stroke-width=".58208">
+   <g stroke="#00fd3d">
+    <circle id="path1535" cx="128.66" cy="144.11" r="3.255" stroke-linejoin="round" style="paint-order:markers stroke fill"/>
+    <path id="path1537" d="m128.66 132.09-2e-5 8.7638"/>
+    <path id="path1539" d="m128.66 147.37v-6.5099"/>
+    <path id="path1541" d="m128.66 156.14 1.0752.61463v4.4272l-1.0752.55339" stroke-linecap="round" stroke-linejoin="round"/>
+   </g>
+   <path id="path1543" d="m128.66 152.1v18.532" stroke="#fff"/>
+   <path id="path1545" d="m128.66 170.63 1.0752.51082v4.342l-1.0752.55338z" stroke="#fda300" stroke-linecap="round" stroke-linejoin="round"/>
+   <path id="path1547" d="m126.59 155.77 1.7933 1.5425h-1.9136l.0799 18.72h2.1153" stroke="#00fd3d" stroke-linejoin="round"/>
+  </g>
+  <text id="text1620" transform="scale(.92687 1.0789)" x="124.59293" y="106.71425" fill="#ffffff" font-family="sans-serif" font-size="4.5018px" stroke-width=".11255" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan1618" x="124.59293" y="106.71425" fill="#ffffff" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">ELEC</tspan></text>
+  <text id="text1951" transform="scale(.98145 1.0189)" x="116.60072" y="101.05515" fill="#00f2f2" font-family="sans-serif" font-size="4.7079px" stroke-width=".1177" style="line-height:1.25" xml:space="preserve"><tspan id="tspan1949" x="116.60072" y="101.05515" fill="#00f2f2" font-family="Arial" font-size="4.7079px" stroke-width=".1177" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">PSI</tspan></text>
+  <g fill="none" stroke="#accafe">
+   <path id="path2643" d="m50.48 182.52h128.53" stroke-width=".79375"/>
+   <path id="path2645" d="m93.435 182.52v16.732" stroke-width=".79375"/>
+   <path id="path2647" d="m136.3 182.52v16.732" stroke-width=".58208"/>
+  </g>
+  <text id="text3416" transform="scale(.90351 1.1068)" x="127.00058" y="70.758888" fill="#fcfdfd" font-family="sans-serif" font-size="5.799px" stroke-width=".14498" style="line-height:1.25" xml:space="preserve"><tspan id="tspan3414" x="127.00058" y="70.758888" fill="#fcfdfd" font-family="Arial" font-size="5.799px" stroke-width=".14498" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">HYD</tspan></text>
+  <path id="path3418" d="m109.64 79.388h10.896" fill="none" stroke="#fff" stroke-width=".58208"/>
+  <path id="path4938" d="m128.66 147.37 2e-5 4.7285" fill="none" stroke="#00fd3d" stroke-width=".58208"/>
+  <g id="YellowHydElecPumpOn" stroke="#fff">
+   <path id="path1938" d="m126.31 113.56h2.3531" fill="none" stroke-width=".58208"/>
+   <path id="path1549" d="m122.06 111.41 4.25 2.151-4.25 2.1516v-2.1516z" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g fill="none" stroke-width=".58208">
+   <g stroke="#00fd3d">
+    <circle id="circle7206" cx="100.83" cy="144.11" r="3.255" stroke-linejoin="round" style="paint-order:markers stroke fill"/>
+    <path id="path7208" d="m100.83 132.09-2e-5 8.7638"/>
+    <path id="path7210" d="m100.83 147.37v-6.5099"/>
+    <path id="path7212" d="m100.83 156.14 1.0752.61463v4.4272l-1.0752.55339" stroke-linecap="round" stroke-linejoin="round"/>
+   </g>
+   <path id="path7214" d="m100.83 152.1v18.532" stroke="#fff"/>
+   <path id="path7216" d="m100.83 170.63 1.0752.51082v4.342l-1.0752.55338z" stroke="#fda300" stroke-linecap="round" stroke-linejoin="round"/>
+   <path id="path7218" d="m98.754 155.77 1.7933 1.5425h-1.9136l.0799 18.72h2.1153" stroke="#00fd3d" stroke-linejoin="round"/>
+  </g>
+  <text id="text7222" transform="scale(.92687 1.0789)" x="94.561623" y="106.71425" fill="#ffffff" font-family="sans-serif" font-size="4.5018px" stroke-width=".11255" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7220" x="94.561623" y="106.71425" fill="#ffffff" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">ELEC</tspan></text>
+  <path id="path7232" d="m100.83 147.37 2e-5 4.7285" fill="none" stroke="#00fd3d" stroke-width=".58208"/>
+  <g id="BlueHydElecPumpOn" stroke="#fff">
+   <path id="path7224" d="m98.476 113.56h2.3531" fill="none" stroke-width=".58208"/>
+   <path id="path7234" d="m94.226 111.41 4.25 2.151-4.25 2.1516v-2.1516z" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g fill="none" stroke-width=".58208">
+   <g stroke="#00fd3d">
+    <circle id="circle7260" cx="72.994" cy="144.11" r="3.255" stroke-linejoin="round" style="paint-order:markers stroke fill"/>
+    <path id="path7262" d="m72.994 132.09-2e-5 8.7638"/>
+    <path id="path7264" d="m72.994 147.37v-6.5099"/>
+    <path id="path7266" d="m72.994 156.14 1.0752.61463v4.4272l-1.0752.55339" stroke-linecap="round" stroke-linejoin="round"/>
+   </g>
+   <path id="path7268" d="m72.994 152.1v18.532" stroke="#fff"/>
+   <path id="path7270" d="m72.994 170.63 1.0752.51082v4.342l-1.0752.55338z" stroke="#fda300" stroke-linecap="round" stroke-linejoin="round"/>
+   <g stroke="#00fd3d">
+    <path id="path7272" d="m70.919 155.77 1.7933 1.5425h-1.9136l.0799 18.72h2.1153" stroke-linejoin="round"/>
+    <path id="path7286" d="m72.994 147.37 2e-5 4.7285"/>
+    <circle id="circle7314" cx="156.5" cy="144.11" r="3.255" stroke-linejoin="round" style="paint-order:markers stroke fill"/>
+    <path id="path7316" d="m156.5 132.09-2e-5 8.7638"/>
+    <path id="path7318" d="m156.5 147.37v-6.5099"/>
+   </g>
+  </g>
+  <text id="text7330" transform="scale(.92687 1.0789)" x="181.75052" y="106.71425" fill="#ffffff" font-family="sans-serif" font-size="4.5018px" stroke-width=".11255" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7328" x="181.75052" y="106.71425" fill="#ffffff" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">RAT</tspan></text>
+  <path id="path7338" d="m156.5 147.37 1e-5 2.3643h-11.108" fill="none" stroke="#00fd3d" stroke-width=".58208"/>
+  <g id="GreenHydRatPumpOn" stroke="#fff">
+   <path id="path7332" d="m158.85 113.56h-2.3531" fill="none" stroke-width=".58208"/>
+   <path id="path7340" d="m163.1 111.41-4.25 2.151 4.25 2.1516v-2.1516z" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g fill="none" stroke="#00fd3d" stroke-width=".58208">
+   <path id="path7368" d="m146.67 146.98-2.5567 5.5022"/>
+   <path id="path7374" d="m72.994 149.73 14.876-1e-5"/>
+   <path id="path7376" d="m89.149 146.98-2.5567 5.5022"/>
+  </g>
+  <g fill="#ffffff" font-family="sans-serif">
+   <text id="text7380" transform="scale(.92687 1.0789)" x="93.93708" y="128.11385" font-size="4.5018px" stroke-width=".11255" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7378" x="93.93708" y="128.11385" fill="#ffffff" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">1</tspan></text>
+   <text id="text7386" transform="scale(.92687 1.0789)" x="153.99969" y="128.11385" font-size="4.5018px" stroke-width=".11255" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7384" x="153.99969" y="128.11385" fill="#ffffff" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">2</tspan></text>
+   <g font-size="4.6789px" stroke-width=".11697">
+    <text id="text7672" transform="scale(.96333 1.0381)" x="63.579224" y="181.14133" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7670" x="63.579224" y="181.14133" fill="#ffffff" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">TAT</tspan></text>
+    <text id="text7676" transform="scale(.96333 1.0381)" x="63.579285" y="185.47266" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7674" x="63.579285" y="185.47266" fill="#ffffff" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">SAT</tspan></text>
+    <text id="text7680" transform="scale(.96333 1.0381)" x="63.579285" y="189.86111" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7678" x="63.579285" y="189.86111" fill="#ffffff" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">ISA</tspan></text>
+   </g>
+  </g>
+  <g fill="#00fd3d" font-family="sans-serif" font-size="4.6789px" stroke-width=".11697">
+   <text id="text7686" transform="scale(.96333 1.0381)" x="74.53125" y="181.14136" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7684" x="74.53125" y="181.14136" fill="#00fd3d" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">- 28</tspan></text>
+   <text id="text7690" transform="scale(.96333 1.0381)" x="74.53125" y="185.45099" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7688" x="74.53125" y="185.45099" fill="#00fd3d" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">- 57</tspan></text>
+   <text id="text7694" transform="scale(.96333 1.0381)" x="77.272827" y="189.86111" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7692" x="77.272827" y="189.86111" fill="#00fd3d" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">0</tspan></text>
+  </g>
+  <g fill="#00f2f2" font-family="sans-serif" font-size="4.6789px" stroke-width=".11697">
+   <text id="text7771" transform="scale(.96333 1.0381)" x="87.17041" y="181.14136" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7769" x="87.17041" y="181.14136" fill="#00f2f2" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">°C</tspan></text>
+   <text id="text8501" transform="scale(.96333 1.0381)" x="87.17041" y="185.50125" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8499" x="87.17041" y="185.50125" fill="#00f2f2" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">°C</tspan></text>
+   <text id="text8505" transform="scale(.96333 1.0381)" x="87.17041" y="189.86115" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8503" x="87.17041" y="189.86115" fill="#00f2f2" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">°C</tspan></text>
+  </g>
+  <g font-family="sans-serif">
+   <text id="text8854" transform="scale(.96333 1.0381)" x="113.30103" y="185.55838" fill="#00fd3d" font-size="4.6789px" stroke-width=".11697" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8852" x="113.30103" y="185.55838" fill="#00fd3d" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">17</tspan></text>
+   <text id="text8858" transform="scale(.96333 1.0381)" x="126.39642" y="185.55838" fill="#00fd3d" font-size="4.6789px" stroke-width=".11697" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8856" x="126.39642" y="185.55838" fill="#00fd3d" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">11</tspan></text>
+   <text id="text8862" transform="scale(.96333 1.0381)" x="119.71783" y="185.4209" fill="#00f2f2" font-size="3.4207px" stroke-width=".085516" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8860" x="119.71783" y="185.4209" fill="#00f2f2" font-family="Arial" font-size="3.4207px" stroke-width=".085516" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">H</tspan></text>
+   <text id="text8866" transform="scale(.82758 1.2083)" x="170.14685" y="155.61592" fill="#ffffff" font-size="4.0196px" stroke-width=".10049" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8864" x="170.14685" y="155.61592" fill="#ffffff" font-family="Arial" font-size="4.0196px" stroke-width=".10049" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GW</tspan></text>
+   <text id="text8870" transform="scale(.82758 1.2083)" x="170.14685" y="159.3369" fill="#ffffff" font-size="4.0196px" stroke-width=".10049" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8868" x="170.14685" y="159.3369" fill="#ffffff" font-family="Arial" font-size="4.0196px" stroke-width=".10049" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GWCG</tspan></text>
+   <g font-size="4.6789px" stroke-width=".11697">
+    <text id="text8874" transform="scale(.96333 1.0381)" x="162.58502" y="181.14136" fill="#00fd3d" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8872" x="162.58502" y="181.14136" fill="#00fd3d" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">147980</tspan></text>
+    <text id="text8878" transform="scale(.96333 1.0381)" x="165.80176" y="185.47269" fill="#00fd3d" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan8876" x="165.80176" y="185.47269" fill="#00fd3d" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">38.5</tspan></text>
+    <text id="text9197" transform="scale(.96333 1.0381)" x="178.30634" y="181.14136" fill="#00f2f2" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan9195" x="178.30634" y="181.14136" fill="#00f2f2" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">KG</tspan></text>
+    <text id="text9201" transform="scale(.96333 1.0381)" x="179.60175" y="185.50125" fill="#00f2f2" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan9199" x="179.60175" y="185.50125" fill="#00f2f2" font-family="Arial" font-size="4.6789px" stroke-width=".11697" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">%</tspan></text>
+   </g>
+   <text id="text7276" transform="scale(.92687 1.0789)" x="64.530342" y="106.71425" fill="#ffffff" font-size="4.5018px" stroke-width=".11255" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan7274" x="64.530342" y="106.71425" fill="#ffffff" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">ELEC</tspan></text>
+  </g>
+  <g id="GreenHydElecPumpOn" stroke="#fff">
+   <path id="path7278" d="m70.641 113.56h2.3531" fill="none" stroke-width=".58208"/>
+   <path id="path7288" d="m66.391 111.41 4.25 2.151-4.25 2.1516v-2.1516z" fill="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g id="GreenHydElecPumpOff">
+   <path id="path28153" d="m70.641 113.56h2.3531" fill="none" stroke="#000" stroke-width=".58208"/>
+   <path id="path28155" d="m66.391 111.41 4.25 2.151-4.25 2.1516v-2.1516z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g id="BlueHydElecPumpOff" transform="translate(27.835)">
+   <path id="path32132" d="m70.641 113.56h2.3531" fill="none" stroke="#000" stroke-width=".58208"/>
+   <path id="path32134" d="m66.391 111.41 4.25 2.151-4.25 2.1516v-2.1516z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g id="YellowHydElecPumpOff" transform="translate(55.67)">
+   <path id="path32864" d="m70.641 113.56h2.3531" fill="none" stroke="#000" stroke-width=".58208"/>
+   <path id="path32866" d="m66.391 111.41 4.25 2.151-4.25 2.1516v-2.1516z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g id="GreenHydRatPumpOff" transform="matrix(-1 0 0 1 229.49 0)">
+   <path id="path33596" d="m70.641 113.56h2.3531" fill="none" stroke="#000" stroke-width=".58208"/>
+   <path id="path33598" d="m66.391 111.41 4.25 2.151-4.25 2.1516v-2.1516z" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width=".65254"/>
+  </g>
+  <g id="GreenHydLineHigh">
+   <text id="text84743" transform="scale(.88874 1.1252)" x="82.132607" y="85.578033" fill="#fcfdfd" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan84741" x="82.132607" y="85.578033" fill="#fcfdfd" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GREEN</tspan></text>
+   <g fill="none" stroke="#00fd3d">
+    <path id="HydHighGreen" d="m72.994 85.493-2.5223 4.4966h5.0452z" stroke-linecap="round" stroke-linejoin="round" stroke-width=".58208"/>
+    <path id="path7282" d="m72.994 124.06 1e-5-18.451" stroke-width=".58208"/>
+    <path id="path7334" d="m156.5 124.06 1e-5-22.207h-11.108" stroke-linejoin="round" stroke-width=".582"/>
+   </g>
+   <text id="text7348" transform="scale(.88874 1.1252)" x="176.1696" y="85.512634" fill="#fcfdfd" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan7346" x="176.1696" y="85.512634" fill="#fcfdfd" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GREEN</tspan></text>
+   <g fill="none" stroke="#00fd3d" stroke-width=".58208">
+    <path id="path7356" d="m80.975 101.85h6.8954"/>
+    <path id="path7358" d="m89.149 99.1-2.5567 5.5022"/>
+    <path id="path7360" d="m146.67 99.1-2.5567 5.5022"/>
+   </g>
+  </g>
+  <g id="GreenHydLineLow">
+   <text id="text11223" transform="scale(.88874 1.1252)" x="82.132607" y="85.578033" fill="#fda300" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan11221" x="82.132607" y="85.578033" fill="#fda300" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GREEN</tspan></text>
+   <g fill="none" stroke="#fda300">
+    <path id="HydLowOrange" d="m72.994 85.493-2.5223 4.4966h5.0452z" stroke-linecap="round" stroke-linejoin="round" stroke-width=".58208"/>
+    <path id="path11227" d="m72.994 124.06 1e-5-18.451" stroke-width=".58208"/>
+    <path id="path11229" d="m156.5 124.06 1e-5-22.207h-11.108" stroke-linejoin="round" stroke-width=".582"/>
+   </g>
+   <text id="text11233" transform="scale(.88874 1.1252)" x="176.1696" y="85.512634" fill="#fda300" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan11231" x="176.1696" y="85.512634" fill="#fda300" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">GREEN</tspan></text>
+   <g fill="none" stroke="#fda300" stroke-width=".58208">
+    <path id="path11235" d="m80.975 101.85h6.8954"/>
+    <path id="path11237" d="m89.149 99.1-2.5567 5.5022"/>
+    <path id="path11239" d="m146.67 99.1-2.5567 5.5022"/>
+   </g>
+  </g>
+  <g id="BlueHydLineHigh">
+   <text id="text86131" transform="scale(.88874 1.1252)" x="113.45255" y="83.162567" fill="#fcfdfd" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan86129" x="113.45255" y="83.162567" fill="#fcfdfd" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">BLUE</tspan></text>
+   <path id="path7226" d="m100.83 82.775-2.5223 4.4966h5.0452z" fill="none" stroke="#00fd3d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".58208"/>
+   <path id="path7228" d="m100.83 124.06 1e-5-21.103" fill="none" stroke="#00fd3d" stroke-width=".58208"/>
+  </g>
+  <g id="BlueHydLineLow">
+   <text id="text21404" transform="scale(.88874 1.1252)" x="113.45255" y="83.162567" fill="#fda300" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan21402" x="113.45255" y="83.162567" fill="#fda300" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">BLUE</tspan></text>
+   <path id="path21406" d="m100.83 82.775-2.5223 4.4966h5.0452z" fill="none" stroke="#fda300" stroke-linecap="round" stroke-linejoin="round" stroke-width=".58208"/>
+   <path id="path21408" d="m100.83 124.06 1e-5-21.103" fill="none" stroke="#fda300" stroke-width=".58208"/>
+  </g>
+  <g id="YellowHydLineHigh">
+   <text id="text86139" transform="scale(.88874 1.1252)" x="144.39629" y="83.162567" fill="#fcfdfd" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan86137" x="144.39629" y="83.162567" fill="#fcfdfd" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">YELLOW</tspan></text>
+   <path id="path1942" d="m128.66 82.775-2.5223 4.4966h5.0452z" fill="none" stroke="#00fd3d" stroke-linecap="round" stroke-linejoin="round" stroke-width=".58208"/>
+   <path id="path1473" d="m128.66 124.06 1e-5-21.103" fill="none" stroke="#00fd3d" stroke-width=".58208"/>
+  </g>
+  <g id="YellowHydLineLow">
+   <text id="text23996" transform="scale(.88874 1.1252)" x="144.39629" y="83.162567" fill="#fda300" font-family="sans-serif" font-size="5.3562px" stroke-width=".13391" style="line-height:1.25" xml:space="preserve"><tspan id="tspan23994" x="144.39629" y="83.162567" fill="#fda300" font-family="Arial" font-size="5.3562px" stroke-width=".13391" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">YELLOW</tspan></text>
+   <path id="path23998" d="m128.66 82.775-2.5223 4.4966h5.0452z" fill="none" stroke="#fda300" stroke-linecap="round" stroke-linejoin="round" stroke-width=".58208"/>
+   <path id="path24000" d="m128.66 124.06 1e-5-21.103" fill="none" stroke="#fda300" stroke-width=".58208"/>
+  </g>
+  <g id="YellowHydEng2PumpOn" stroke="#00fd3d" stroke-width=".58208">
+   <path id="rect695" x="124.60058" y="124.05872" width="8.1276846" height="8.0357552" d="m124.87 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26458-.26458v-7.5066a.26458.26458 135 01.26458-.26459z" stroke-linejoin="round" style="paint-order:markers fill stroke"/>
+   <path id="path1462" d="m128.66 124.06v8.0358" fill="none"/>
+  </g>
+  <g id="BlueHydEng1PumpOn" stroke="#00fd3d" stroke-width=".58208">
+   <path id="path7202" x="96.765434" y="124.05872" width="8.1276846" height="8.0357552" d="m97.03 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26458-.26458v-7.5066a.26458.26458 135 01.26458-.26459z" stroke-linejoin="round" style="paint-order:markers fill stroke"/>
+   <path id="path7204" d="m100.83 124.06v8.0358" fill="none"/>
+  </g>
+  <g id="GreenHydEng1PumpOn" stroke="#00fd3d">
+   <path id="path7256" x="68.93029" y="124.05872" width="8.1276846" height="8.0357552" d="m69.195 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26458-.26458v-7.5066a.26458.26458 135 01.26458-.26459z" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <path id="path7258" d="m72.994 124.06v8.0358" fill="none" stroke-width=".58208"/>
+  </g>
+  <g id="GreenHydEng2PumpOn" stroke="#00fd3d" stroke-width=".58208">
+   <path id="path7310" x="152.43571" y="124.05872" width="8.1276846" height="8.0357552" d="m152.7 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26459-.26458v-7.5066a.26458.26458 135 01.26459-.26459z" stroke-linejoin="round" style="paint-order:markers fill stroke"/>
+   <path id="path7312" d="m156.5 124.06v8.0358" fill="none"/>
+  </g>
+  <g id="GreenHydEng1PumpOff" stroke="#fda300">
+   <path id="path41586" x="68.93029" y="124.05872" width="8.1276846" height="8.0357552" d="m69.195 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26458-.26458v-7.5066a.26458.26458 135 01.26458-.26459z" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <path id="path41588" d="m75.556 128.08h-5.1247" fill="none" stroke-width=".58208"/>
+  </g>
+  <g id="BlueHydEng1PumpOff" transform="translate(27.835)" stroke="#fda300">
+   <path id="path43117" x="68.93029" y="124.05872" width="8.1276846" height="8.0357552" d="m69.195 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26458-.26458v-7.5066a.26458.26458 135 01.26458-.26459z" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <path id="path43119" d="m75.556 128.08h-5.1247" fill="none" stroke-width=".58208"/>
+  </g>
+  <g id="YellowHydEng2PumpOff" transform="translate(55.67)" stroke="#fda300">
+   <path id="path43853" x="68.93029" y="124.05872" width="8.1276846" height="8.0357552" d="m69.195 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26458-.26458v-7.5066a.26458.26458 135 01.26458-.26459z" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <path id="path43855" d="m75.556 128.08h-5.1247" fill="none" stroke-width=".58208"/>
+  </g>
+  <g id="GreenHydEng2PumpOff" transform="translate(83.505)" stroke="#fda300">
+   <path id="path44589" x="68.93029" y="124.05872" width="8.1276846" height="8.0357552" d="m69.195 124.06h7.5985a.26458.26458 45 01.26458.26459v7.5066a.26458.26458 135 01-.26458.26458h-7.5985a.26458.26458 45 01-.26458-.26458v-7.5066a.26458.26458 135 01.26458-.26459z" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <path id="path44591" d="m75.556 128.08h-5.1247" fill="none" stroke-width=".58208"/>
+  </g>
+  <g id="GreenHydEng1PumpLow" transform="translate(40.149 -27.696)">
+   <path id="path45325" x="28.780811" y="151.75479" width="8.1276846" height="8.0357552" d="m29.045 151.75h7.5985a.26458.26458 45 01.26458.26458v7.5066a.26458.26458 135 01-.26458.26459h-7.5985a.26458.26458 45 01-.26458-.26459v-7.5066a.26458.26458 135 01.26458-.26458z" stroke="#fda300" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <text id="text45337" transform="scale(.92687 1.0789)" x="35.359959" y="146.30603" fill="#fda300" font-family="sans-serif" font-size="5.3744px" stroke-width=".13436" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan45335" x="35.359959" y="146.30603" fill="#fda300" font-family="Arial" font-size="5.3744px" stroke-width=".13436" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">LO</tspan></text>
+  </g>
+  <g id="BlueHydEng1PumpLow" transform="translate(67.985 -27.696)">
+   <path id="path46210" x="28.780811" y="151.75479" width="8.1276846" height="8.0357552" d="m29.045 151.75h7.5985a.26458.26458 45 01.26458.26458v7.5066a.26458.26458 135 01-.26458.26459h-7.5985a.26458.26458 45 01-.26458-.26459v-7.5066a.26458.26458 135 01.26458-.26458z" stroke="#fda300" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <g id="text46214" transform="scale(.92687 1.0789)" fill="#fda300" stroke-width=".13436" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none" aria-label="LO">
+    <path id="path47064" d="m32.169 146.31v-3.8471h.5091v3.3931h1.8947v.45399z"/>
+    <path id="path47066" d="m35.024 144.43q0-.95784.51435-1.4984.51435-.54321 1.3279-.54321.53272 0 .96047.25455.42775.25455.65081.71116.22568.45399.22568 1.0313 0 .5852-.23618 1.0471-.23618.46186-.66918.70067-.433.23618-.93422.23618-.54321 0-.97096-.26243-.42775-.26242-.64818-.71641t-.22044-.96047zm.52484.008q0 .69542.37264 1.0969.37526.39888.93947.39888.5747 0 .94472-.40413.37264-.40413.37264-1.1468 0-.46974-.16008-.81876-.15745-.35165-.46449-.54321-.30441-.1942-.68492-.1942-.54059 0-.9316.37264-.38838.37002-.38838 1.2386z"/>
+   </g>
+  </g>
+  <g id="YellowHydEng2PumpLow" transform="translate(95.82 -27.696)">
+   <path id="path47069" x="28.780811" y="151.75479" width="8.1276846" height="8.0357552" d="m29.045 151.75h7.5985a.26458.26458 45 01.26458.26458v7.5066a.26458.26458 135 01-.26458.26459h-7.5985a.26458.26458 45 01-.26458-.26459v-7.5066a.26458.26458 135 01.26458-.26458z" stroke="#fda300" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <g id="g47075" transform="scale(.92687 1.0789)" fill="#fda300" stroke-width=".13436" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none" aria-label="LO">
+    <path id="path47071" d="m32.169 146.31v-3.8471h.5091v3.3931h1.8947v.45399z"/>
+    <path id="path47073" d="m35.024 144.43q0-.95784.51435-1.4984.51435-.54321 1.3279-.54321.53272 0 .96047.25455.42775.25455.65081.71116.22568.45399.22568 1.0313 0 .5852-.23618 1.0471-.23618.46186-.66918.70067-.433.23618-.93422.23618-.54321 0-.97096-.26243-.42775-.26242-.64818-.71641t-.22044-.96047zm.52484.008q0 .69542.37264 1.0969.37526.39888.93947.39888.5747 0 .94472-.40413.37264-.40413.37264-1.1468 0-.46974-.16008-.81876-.15745-.35165-.46449-.54321-.30441-.1942-.68492-.1942-.54059 0-.9316.37264-.38838.37002-.38838 1.2386z"/>
+   </g>
+  </g>
+  <g id="GreenHydEng2PumpLow" transform="translate(123.65 -27.696)">
+   <path id="path47809" x="28.780811" y="151.75479" width="8.1276846" height="8.0357552" d="m29.045 151.75h7.5985a.26458.26458 45 01.26458.26458v7.5066a.26458.26458 135 01-.26458.26459h-7.5985a.26458.26458 45 01-.26458-.26459v-7.5066a.26458.26458 135 01.26458-.26458z" stroke="#fda300" stroke-linejoin="round" stroke-width=".582" style="paint-order:markers fill stroke"/>
+   <g id="g47815" transform="scale(.92687 1.0789)" fill="#fda300" stroke-width=".13436" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none" aria-label="LO">
+    <path id="path47811" d="m32.169 146.31v-3.8471h.5091v3.3931h1.8947v.45399z"/>
+    <path id="path47813" d="m35.024 144.43q0-.95784.51435-1.4984.51435-.54321 1.3279-.54321.53272 0 .96047.25455.42775.25455.65081.71116.22568.45399.22568 1.0313 0 .5852-.23618 1.0471-.23618.46186-.66918.70067-.433.23618-.93422.23618-.54321 0-.97096-.26243-.42775-.26242-.64818-.71641t-.22044-.96047zm.52484.008q0 .69542.37264 1.0969.37526.39888.93947.39888.5747 0 .94472-.40413.37264-.40413.37264-1.1468 0-.46974-.16008-.81876-.15745-.35165-.46449-.54321-.30441-.1942-.68492-.1942-.54059 0-.9316.37264-.38838.37002-.38838 1.2386z"/>
+   </g>
   </g>
  </g>
 </svg>

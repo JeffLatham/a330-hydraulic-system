@@ -27,6 +27,9 @@ let hydSystemUI = {
 
   refreshRate: 10, // Hz
 
+  ecamGreen:  '#00fd3d',
+  ecamOrange: '#fda300',
+
   // switches object contains all switch objects
   switches: {
 
@@ -239,6 +242,23 @@ let hydSystemUI = {
     },
   },
 
+  engineSwitches: {
+
+    Eng1Switch: {
+      engine: 'eng1',
+      states: {
+        On:   false,
+      },
+    },
+
+    Eng2Switch: {
+      engine: 'eng2',
+      states: {
+        On:   false,
+      },
+    },
+  },
+
   hydLoops: {
 
     Green: {
@@ -414,10 +434,6 @@ let hydSystemUI = {
   // init Initializes all UI elements
   init: function() {
 
-    // Get colors
-    let ecamGreen = getElement('HydHighGreen').getAttribute('stroke');
-    let ecamOrnage = getElement('HydLowOrange').getAttribute('stroke');
-
     // Initialize Switches
     const allSwitches = Object.keys(this.switches);
     allSwitches.forEach((thisSwitch) => {
@@ -439,6 +455,18 @@ let hydSystemUI = {
       // Attach click events
       getElement(thisCover+'Open').addEventListener("click", () => this.coverToggle(thisCover));
       getElement(thisCover+'Closed').addEventListener("click", () => this.coverToggle(thisCover));
+    });
+
+    // Initialize engine switches
+    const allEngineSwitches = Object.keys(this.engineSwitches);
+    allEngineSwitches.forEach((thisEngineSwitch) => {
+
+      // Configure Cover based on initial conditions
+      this.engineToggle(thisEngineSwitch);
+        
+      // Attach click events
+      getElement(thisEngineSwitch+'On').addEventListener("click", () => this.engineToggle(thisEngineSwitch));
+      getElement(thisEngineSwitch+'Off').addEventListener("click", () => this.engineToggle(thisEngineSwitch));
     });
 
     // Continuously refresh UI
@@ -492,6 +520,21 @@ let hydSystemUI = {
     } else {
       getElement(coverName+'Closed').style.display = 'none';
       getElement(coverName+'Open').style.display = 'inline';
+    }
+  },
+
+  engineToggle: function(engineName) {
+
+    this.engineSwitches[engineName].states.On = !this.engineSwitches[engineName].states.On;
+
+    if(this.engineSwitches[engineName].states.On) {
+      getElement(engineName+'On').style.display = 'inline';
+      getElement(engineName+'Off').style.display = 'none';
+      this.engines[this.engineSwitches[engineName].engine].running = true;
+    } else {
+      getElement(engineName+'On').style.display = 'none';
+      getElement(engineName+'Off').style.display = 'inline';
+      this.engines[this.engineSwitches[engineName].engine].running = false;
     }
   },
 
@@ -563,7 +606,7 @@ let hydSystemUI = {
       if(pressureHigh) {
         getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamGreen);
       } else {
-        getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamOrnage);
+        getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamOrange);
       }
 
       // Set line pressure indicator

@@ -1,5 +1,5 @@
 <svg id="system" width="900" height="900" version="1.1" viewBox="0 0 238.13 238.13" xmlns="http://www.w3.org/2000/svg">
- <rect id="rect72181" x="3.5527e-15" y="-.00055556" width="206.82" height="46.339" fill="#5b717e" style="paint-order:markers stroke fill"/>
+ <rect id="rect72181" width="206.82" height="46.339" fill="#5b717e" style="paint-order:markers stroke fill"/>
  <g id="GreenHydElecPumpOffSwitchButton" transform="matrix(.98773 0 0 .98773 -64.071 -190.62)">
   <path id="rect32533" x="77.127907" y="223.12306" width="11.86979" height="11.86979" d="m77.657 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="#333" stroke="#666" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
   <g id="GreenHydElecPumpOffSwitchStatus" transform="translate(18.291 -27.745)">
@@ -95,7 +95,7 @@
   <path id="path19882" x="77.127907" y="223.12306" width="11.86979" height="11.86979" d="m77.657 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="none" stroke="#999" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
   <path id="GreenHydEng2PumpSwitchPush" x="77.127907" y="223.12306" width="11.86979" height="11.86979" d="m77.657 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="none" stroke="#1a1a1a" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
  </g>
- <g id="BlueHydElecPumpOnSwitchButton" transform="matrix(.98774 0 0 .98774 -30.29 -211.84)">
+ <g id="BlueHydElecPumpOnSwitchButton" transform="matrix(.98774 0 0 .98774 -30.289 -211.84)">
   <path id="path21151" x="93.797478" y="223.12306" width="11.86979" height="11.86979" d="m94.327 223.12h10.811a.52917.52917 45 01.52917.52917v10.811a.52917.52917 135 01-.52917.52916h-10.811a.52917.52917 45 01-.52917-.52916v-10.811a.52917.52917 135 01.52917-.52917z" fill="#333" stroke="#666" stroke-linecap="square" stroke-width=".52917" style="paint-order:markers stroke fill"/>
   <g id="BlueHydElecPumpOnSwitchStatus">
    <path id="path21153" x="95.637863" y="229.75716" width="8.2260761" height="3.486815" d="m95.902 229.76h7.6969a.26458.26458 45 01.26458.26458v2.9576a.26458.26458 135 01-.26458.26458h-7.6969a.26458.26458 45 01-.26458-.26458v-2.9576a.26458.26458 135 01.26458-.26458z" fill="none" stroke="#94d4f3" stroke-linecap="square" stroke-width=".26458" style="paint-order:markers stroke fill"/>
@@ -121,7 +121,7 @@
    <circle id="circle24113" cx="102.7" cy="226.09" r=".90235" style="paint-order:markers stroke fill"/>
   </g>
  </g>
- <g id="HydECAM" transform="matrix(1 0 0 1 -11.337 -20.147)">
+ <g id="HydECAM" transform="matrix(1 0 0 1 -11.337 -20.146)">
   <rect id="rect82301" x="50.48" y="70.802" width="128.53" height="128.65" ry="0" style="paint-order:markers stroke fill"/>
   <g fill="#00fd3d" font-family="sans-serif" font-size="6.0268px" stroke-width=".15067">
    <text id="GreenHydPressureDisplay" x="72.994133" y="103.97891" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan82303" x="72.994133" y="103.97891" fill="#00fd3d" font-family="Arial" font-size="6.0268px" stroke-width=".15067" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">3000</tspan></text>
@@ -355,6 +355,10 @@
     <path id="path47811" d="m32.169 146.31v-3.8471h.5091v3.3931h1.8947v.45399z"/>
     <path id="path47813" d="m35.024 144.43q0-.95784.51435-1.4984.51435-.54321 1.3279-.54321.53272 0 .96047.25455.42775.25455.65081.71116.22568.45399.22568 1.0313 0 .5852-.23618 1.0471-.23618.46186-.66918.70067-.433.23618-.93422.23618-.54321 0-.97096-.26243-.42775-.26242-.64818-.71641t-.22044-.96047zm.52484.008q0 .69542.37264 1.0969.37526.39888.93947.39888.5747 0 .94472-.40413.37264-.40413.37264-1.1468 0-.46974-.16008-.81876-.15745-.35165-.46449-.54321-.30441-.1942-.68492-.1942-.54059 0-.9316.37264-.38838.37002-.38838 1.2386z"/>
    </g>
+  </g>
+  <g id="RatRpm" transform="translate(.13549 -.17071)" fill="#00fd3d" font-family="sans-serif" font-size="4.5018px" stroke-width=".11255">
+   <text id="text843" transform="scale(.92687 1.0789)" x="181.75052" y="111.88848" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan947" x="181.75052" y="111.88848" fill="#00fd3d" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">5600</tspan></text>
+   <text id="text2578" transform="scale(.92687 1.0789)" x="181.75052" y="116.83898" style="-moz-user-select:none;-ms-user-select:none;-webkit-user-select:none;line-height:1.25" xml:space="preserve"><tspan id="tspan2576" x="181.75052" y="116.83898" fill="#00fd3d" font-family="Arial" font-size="4.5018px" stroke-width=".11255" text-align="center" text-anchor="middle" style="font-variant-caps:normal;font-variant-east-asian:normal;font-variant-ligatures:normal;font-variant-numeric:normal">RPM</tspan></text>
   </g>
  </g>
  <g id="EngineSwitches" transform="matrix(.82961 0 0 .82961 6.968 17.342)">

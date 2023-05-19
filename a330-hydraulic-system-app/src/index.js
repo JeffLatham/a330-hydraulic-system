@@ -1,7 +1,6 @@
 /*
 
-What this is: 	A330 Hydraulic System react app. 
-
+A330 Hydraulic System react app. 
 Written by : 	  Jeff Latham
 
 */
@@ -27,8 +26,10 @@ let hydSystemUI = {
 
   refreshRate: 10, // Hz
 
+  airspeed: 250, // KIAS
+
   ecamGreen:  '#00fd3d',
-  ecamOrange: '#fda300',
+  ecamAmber: '#fda300',
 
   // switches object contains all switch objects
   switches: {
@@ -47,7 +48,8 @@ let hydSystemUI = {
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if( !hydSystemUI.switches.GreenHydElecPumpOffSwitch.states.Status && 
+          ( this.states.Push || hydSystemUI.hydLoops.Green.hydPumps.GreenHydElecPump.autoSwitch ) ) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
@@ -58,15 +60,22 @@ let hydSystemUI = {
     GreenHydElecPumpOffSwitch: {
       type: 'latch',
       states: {
-        Push:   false,
+        Push:   true,
         Fault:  false,
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if(!this.states.Push) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
+        }
+      },
+      setFault: function() {
+        if(!hydSystemUI.engines.eng1.running && !hydSystemUI.engines.eng2.running && !this.states.Status) {
+          this.states.Fault = true;
+        } else {
+          this.states.Fault = false;
         }
       },
     },
@@ -74,19 +83,19 @@ let hydSystemUI = {
     GreenHydEng1PumpSwitch: {
       type: 'latch',
       states: {
-        Push:   false,
+        Push:   true,
         Fault:  false,
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if(!this.states.Push) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
         }
       },
       setFault: function() {
-        if(!hydSystemUI.engines.eng1.running) {
+        if(!hydSystemUI.engines.eng1.running && !this.states.Status) {
           this.states.Fault = true;
         } else {
           this.states.Fault = false;
@@ -101,7 +110,8 @@ let hydSystemUI = {
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if( !hydSystemUI.switches.BlueHydElecPumpOffSwitch.states.Status && 
+          ( this.states.Push || hydSystemUI.hydLoops.Blue.hydPumps.BlueHydElecPump.autoSwitch ) ) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
@@ -112,15 +122,22 @@ let hydSystemUI = {
     BlueHydElecPumpOffSwitch: {
       type: 'latch',
       states: {
-        Push:   false,
+        Push:   true,
         Fault:  false,
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if(!this.states.Push) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
+        }
+      },
+      setFault: function() {
+        if(!hydSystemUI.engines.eng1.running && !hydSystemUI.engines.eng2.running && !this.states.Status) {
+          this.states.Fault = true;
+        } else {
+          this.states.Fault = false;
         }
       },
     },
@@ -128,19 +145,19 @@ let hydSystemUI = {
     BlueHydEng1PumpSwitch: {
       type: 'latch',
       states: {
-        Push:   false,
+        Push:   true,
         Fault:  false,
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if(!this.states.Push) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
         }
       },
       setFault: function() {
-        if(!hydSystemUI.engines.eng1.running) {
+        if(!hydSystemUI.engines.eng1.running && !this.states.Status) {
           this.states.Fault = true;
         } else {
           this.states.Fault = false;
@@ -155,7 +172,8 @@ let hydSystemUI = {
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if( !hydSystemUI.switches.YellowHydElecPumpOffSwitch.states.Status && 
+          ( this.states.Push || hydSystemUI.hydLoops.Yellow.hydPumps.YellowHydElecPump.autoSwitch ) ) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
@@ -166,15 +184,22 @@ let hydSystemUI = {
     YellowHydElecPumpOffSwitch: {
       type: 'latch',
       states: {
-        Push:   false,
+        Push:   true,
         Fault:  false,
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if(!this.states.Push) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
+        }
+      },
+      setFault: function() {
+        if(!hydSystemUI.engines.eng1.running && !hydSystemUI.engines.eng2.running && !this.states.Status) {
+          this.states.Fault = true;
+        } else {
+          this.states.Fault = false;
         }
       },
     },
@@ -182,19 +207,19 @@ let hydSystemUI = {
     YellowHydEng2PumpSwitch: {
       type: 'latch',
       states: {
-        Push:   false,
+        Push:   true,
         Fault:  false,
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if(!this.states.Push) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
         }
       },
       setFault: function() {
-        if(!hydSystemUI.engines.eng2.running) {
+        if(!hydSystemUI.engines.eng2.running && !this.states.Status) {
           this.states.Fault = true;
         } else {
           this.states.Fault = false;
@@ -205,19 +230,19 @@ let hydSystemUI = {
     GreenHydEng2PumpSwitch: {
       type: 'latch',
       states: {
-        Push:   false,
+        Push:   true,
         Fault:  false,
         Status: false,
       },
       setStatus: function() {
-        if(this.states.Push) {
+        if(!this.states.Push) {
           this.states.Status = true;
         } else {
           this.states.Status = false;
         }
       },
       setFault: function() {
-        if(!hydSystemUI.engines.eng2.running) {
+        if(!hydSystemUI.engines.eng2.running && !this.states.Status) {
           this.states.Fault = true;
         } else {
           this.states.Fault = false;
@@ -264,20 +289,22 @@ let hydSystemUI = {
     Green: {
       pressure: 0,
       pressureSensor: 'GreenHydPressureDisplay',
-      pressureLevelLow: 2000,
+      pressureLevelLow: 1450,
 
       hydPumps: {
 
         GreenHydElecPump: {
           power: true,
-          // loop: 'green',
           type: 'elec',
           autoSwitch: false,
-          maxOutputPressure: 2920,
+          outputPressure: 3000,
+          normalOutputPressure: 3000,
           setPower: function() {
             if(!hydSystemUI.switches.GreenHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.GreenHydElecPumpOnSwitch.states.Status) {
                 this.power = true;
+              } else {
+                this.power = false;
               }
             } else {
               this.power = false;
@@ -287,38 +314,53 @@ let hydSystemUI = {
         
         GreenHydEng1Pump: {
           power: true,
-          // loop: 'green',
           type: 'eng1',
-          maxOutputPressure: 2950,
+          outputPressure: 3000,
+          normalOutputPressure: 3000,
           setPower: function() {
+
             if(!hydSystemUI.switches.GreenHydEng1PumpSwitch.states.Status) {
               this.power = true;
             } else {
               this.power = false;
+            }
+
+            if(!hydSystemUI.engines.eng1.running) {
+              this.outputPressure = 0;
+            } else {
+              this.outputPressure = this.normalOutputPressure;
             }
           },
         },
     
         GreenHydEng2Pump: {
           power: true,
-          // loop: 'green',
           type: 'eng2',
-          maxOutputPressure: 2940,
+          outputPressure: 3000,
+          normalOutputPressure: 3000,
           setPower: function() {
+
             if(!hydSystemUI.switches.GreenHydEng2PumpSwitch.states.Status) {
               this.power = true;
             } else {
               this.power = false;
+            }
+
+            if(!hydSystemUI.engines.eng2.running) {
+              this.outputPressure = 0;
+            } else {
+              this.outputPressure = this.normalOutputPressure;
             }
           },
         },
     
         GreenHydRatPump: {
           power: false,
-          // loop: 'green',
           type: 'rat',
-          maxOutputPressure: 2900,
+          outputPressure: 2500,
+          normalOutputPressure: 2500,
           setPower: function() {
+
             if(hydSystemUI.switches.RatSwitch.states.Push) {
               this.power = true;
             }
@@ -331,20 +373,22 @@ let hydSystemUI = {
     Blue: {
       pressure: 0,
       pressureSensor: 'BlueHydPressureDisplay',
-      pressureLevelLow: 2000,
+      pressureLevelLow: 1450,
 
       hydPumps: {
 
         BlueHydElecPump: {
-          power: true,
-          // loop: 'blue',
+          power: false,
           type: 'elec',
           autoSwitch: false,
-          maxOutputPressure: 2820,
+          outputPressure: 3000,
+          normalOutputPressure: 3000,
           setPower: function() {
             if(!hydSystemUI.switches.BlueHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.BlueHydElecPumpOnSwitch.states.Status) {
                 this.power = true;
+              } else {
+                this.power = false;
               }
             } else {
               this.power = false;
@@ -354,14 +398,21 @@ let hydSystemUI = {
     
         BlueHydEng1Pump: {
           power: true,
-          // loop: 'blue',
           type: 'eng1',
-          maxOutputPressure: 2850,
+          outputPressure: 3000,
+          normalOutputPressure: 3000,
           setPower: function() {
+
             if(!hydSystemUI.switches.BlueHydEng1PumpSwitch.states.Status) {
               this.power = true;
             } else {
               this.power = false;
+            }
+
+            if(!hydSystemUI.engines.eng1.running) {
+              this.outputPressure = 0;
+            } else {
+              this.outputPressure = this.normalOutputPressure;
             }
           },
         },
@@ -371,20 +422,22 @@ let hydSystemUI = {
     Yellow: {
       pressure: 0,
       pressureSensor: 'YellowHydPressureDisplay',
-      pressureLevelLow: 2000,
+      pressureLevelLow: 1450,
 
       hydPumps: {
 
         YellowHydElecPump: {
           power: true,
-          // loop: 'yellow',
           type: 'elec',
           autoSwitch: false,
-          maxOutputPressure: 2720,
+          outputPressure: 3000,
+          normalOutputPressure: 3000,
           setPower: function() {
             if(!hydSystemUI.switches.YellowHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.YellowHydElecPumpOnSwitch.states.Status) {
                 this.power = true;
+              } else {
+                this.power = false;
               }
             } else {
               this.power = false;
@@ -394,28 +447,35 @@ let hydSystemUI = {
     
         YellowHydEng2Pump: {
           power: true,
-          // loop: 'yellow',
           type: 'eng2',
-          maxOutputPressure: 2750,
+          outputPressure: 3000,
+          normalOutputPressure: 3000,
           setPower: function() {
+
             if(!hydSystemUI.switches.YellowHydEng2PumpSwitch.states.Status) {
               this.power = true;
             } else {
               this.power = false;
             }
+
+            if(!hydSystemUI.engines.eng2.running) {
+              this.outputPressure = 0;
+            } else {
+              this.outputPressure = this.normalOutputPressure;
+            }
           },
         },
     
-        YellowHydHandPump: {
-          power: false,
-          // loop: 'yellow',
-          type: 'hand',
-          maxOutputPressure: 2700,
-          // setPower: function() {
-          //   // just testing, actually put in logic!!!
-          //   this.power = false;
-          // },
-        },
+        // YellowHydHandPump: {
+        //   power: false,
+        //   type: 'hand',
+        //   outputPressure: 3000,
+        //   normalOutputPressure: 3000,
+        //   // setPower: function() {
+        //   //   // just testing, actually put in logic!!!
+        //   //   this.power = false;
+        //   // },
+        // },
       },
     },
   },
@@ -557,19 +617,41 @@ let hydSystemUI = {
     });
 
     // Set elec pump auto switches
-    this.hydLoops.Green.hydPumps.GreenHydElecPump.autoSwitch = true;
-    this.hydLoops.Blue.hydPumps.BlueHydElecPump.autoSwitch = true;
-    this.hydLoops.Yellow.hydPumps.YellowHydElecPump.autoSwitch = true;
+    if(!this.engines.eng1.running || !this.hydLoops.Green.hydPumps.GreenHydEng1Pump.power || 
+       !this.engines.eng2.running || !this.hydLoops.Green.hydPumps.GreenHydEng2Pump.power) {
+      this.hydLoops.Green.hydPumps.GreenHydElecPump.autoSwitch = true;
+    } else {
+      this.hydLoops.Green.hydPumps.GreenHydElecPump.autoSwitch = false;
+    }
+
+    if(!this.engines.eng1.running || !this.hydLoops.Blue.hydPumps.BlueHydEng1Pump.power) {
+      this.hydLoops.Blue.hydPumps.BlueHydElecPump.autoSwitch = true;
+    } else {
+      this.hydLoops.Blue.hydPumps.BlueHydElecPump.autoSwitch = false;
+    }
+
+    if(!this.engines.eng2.running || !this.hydLoops.Yellow.hydPumps.YellowHydEng2Pump.power) {
+      this.hydLoops.Yellow.hydPumps.YellowHydElecPump.autoSwitch = true;
+    } else {
+      this.hydLoops.Yellow.hydPumps.YellowHydElecPump.autoSwitch = false;
+    }
+
+    // Deploy RAT
+    if(!this.engines.eng1.running && !this.engines.eng2.running && this.airspeed > 100) {
+      this.switchPush('RatSwitch');
+    }
   },
 
   //
   simulateHydLoops: function() {
 
+    // For all hyd loops
     const allHydLoops = Object.keys(this.hydLoops);
     allHydLoops.forEach((thisHydLoop) => {
 
       let pressure = 0;
 
+      // For all hyd loop pumps
       const allHydLoopPumps = Object.keys(this.hydLoops[thisHydLoop].hydPumps);
       allHydLoopPumps.forEach((thisHydPump) => {
 
@@ -579,8 +661,8 @@ let hydSystemUI = {
 
         if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].power) {
           
-          if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].maxOutputPressure > pressure) {
-            pressure = this.hydLoops[thisHydLoop].hydPumps[thisHydPump].maxOutputPressure;
+          if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].outputPressure > pressure) {
+            pressure = this.hydLoops[thisHydLoop].hydPumps[thisHydPump].outputPressure;
           }
         }
       });
@@ -606,7 +688,7 @@ let hydSystemUI = {
       if(pressureHigh) {
         getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamGreen);
       } else {
-        getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamOrange);
+        getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamAmber);
       }
 
       // Set line pressure indicator
@@ -630,9 +712,17 @@ let hydSystemUI = {
           if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].power) {
             getElement(thisHydPump + 'On').style.display = 'inline';
             getElement(thisHydPump + 'Off').style.display = 'none';
+
+            if(pumpType === 'rat') {
+              getElement('RatRpm').style.display = 'inline';
+            }
           } else {
             getElement(thisHydPump + 'On').style.display = 'none';
             getElement(thisHydPump + 'Off').style.display = 'inline';
+
+            if(pumpType === 'rat') {
+              getElement('RatRpm').style.display = 'none';
+            }
           }
         }
 
@@ -656,9 +746,20 @@ let hydSystemUI = {
             getElement(thisHydPump + 'Low').style.display = 'none';
           }
         }
-      });
 
-      
+        // Set engine indicators
+        if(this.engines.eng1.running) {
+          getElement('Eng1Ind').firstChild.setAttribute('fill', 'white');
+        } else {
+          getElement('Eng1Ind').firstChild.setAttribute('fill', this.ecamAmber);
+        }
+
+        if(this.engines.eng2.running) {
+          getElement('Eng2Ind').firstChild.setAttribute('fill', 'white');
+        } else {
+          getElement('Eng2Ind').firstChild.setAttribute('fill', this.ecamAmber);
+        }
+      });
     });
   }
 };
@@ -670,10 +771,7 @@ class UI extends React.Component {
   constructor(props) {
 
     super(props);
-
-    this.state = {
-      
-    };
+    this.state = {};
   }
 
   // componentDidMount 
@@ -688,13 +786,9 @@ class UI extends React.Component {
 
   // render
   render() {
-
-    // Code can go here before the return
-
     
     return (
       <div>
-        <div id='testDiv'>test div</div>
         <HydSystemUI />
       </div>
     );

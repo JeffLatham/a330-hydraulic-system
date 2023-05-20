@@ -1,6 +1,6 @@
 /*
 
-A330 Hydraulic System react app. 
+A330 Hydraulic System react app 
 Written by : 	  Jeff Latham
 
 */
@@ -9,37 +9,43 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 
-// Import SVG source files
+// Import SVG source file
 import { ReactComponent as HydSystemUI  } from './svg/A330HydSystemUI.svg'
 
 // getElement does the same thing as "document.getElementById()" except 
 // it's also nice enough to tell you if it can't find the element instead 
-// of just mysteriously breaking the program and leaving you S.O.L. (:
+// of just mysteriously breaking the program. (:
 function getElement(elementID) {
   let element = document.getElementById(elementID);
   if(element === null) { alert('cannot find element: ' + elementID); };
   return element;
 }
 
-// // Default View object
+// Object containing all simulation and UI logic
 let hydSystemUI = {
 
-  refreshRate: 10, // Hz, refresh rate for the entire UI and simulation
+  refreshRate: 10,  // Hz, refresh rate for the entire UI and simulation
+  airspeed: 250,    // KIAS, indicated airspeed
 
-  airspeed: 250, // KIAS, indicated airspeed
-
+  // Colors
   ecamGreen:  '#00fd3d',
   ecamAmber: '#fda300',
 
-  // switches object contains all switch objects
+  // switches object contains all overhead HYD panel switch objects
   switches: {
 
     // Switch Names:
-    // These switch names must exactly match the "id" attribute 
+    // These names must exactly match the "id" attribute 
     // for the switch in the imported SVG file. This app imports 
     // the A330HydSystemUI.svg file and draws it in the browser.
     // This app then modifies the imported SVG elements on the screen 
-    // based on the switch names listed here.
+    // based on the names listed here.
+
+    // setStatus() contains the conditions for setting the switch status 
+    // but is called remotely from hsmu().
+
+    // setFault() contains the conditions for setting the switch fault 
+    // but is called remotely from hsmu().
 
     GreenHydElecPumpOnSwitch: {
       type: 'latch',
@@ -258,7 +264,15 @@ let hydSystemUI = {
     },
   },
 
+  // covers object contains all overhead HYD panel switch cover objects
   covers: {
+
+    // Cover Names:
+    // These names must exactly match the "id" attribute 
+    // for the cover in the imported SVG file. This app imports 
+    // the A330HydSystemUI.svg file and draws it in the browser.
+    // This app then modifies the imported SVG elements on the screen 
+    // based on the names listed here.
 
     RatSwitchCover: {
       states: {
@@ -267,7 +281,15 @@ let hydSystemUI = {
     },
   },
 
+  // engineSwitches object contains all engine switch objects
   engineSwitches: {
+
+    // Engine Switch Names:
+    // These names must exactly match the "id" attribute 
+    // for the engine switch in the imported SVG file. This app imports 
+    // the A330HydSystemUI.svg file and draws it in the browser.
+    // This app then modifies the imported SVG elements on the screen 
+    // based on the names listed here.
 
     Eng1Switch: {
       engine: 'eng1',
@@ -284,12 +306,16 @@ let hydSystemUI = {
     },
   },
 
+  // hydLoops object contains all data for all three hydraulic loops
   hydLoops: {
 
+    // setPower() contains the conditions for a hydraulic pump to be powered. 
+    // It is called externally from simulateHydLoops().
+
     Green: {
-      pressure: 0,
-      pressureSensor: 'GreenHydPressureDisplay',
-      pressureLevelLow: 1450,
+      pressure: 0, // psi
+      pressureSensor: 'GreenHydPressureDisplay', // name of ECAM UI element
+      pressureLevelLow: 1450, // low pressure threshold
 
       hydPumps: {
 
@@ -299,7 +325,6 @@ let hydSystemUI = {
           autoSwitch: false,
           outputPressure: 3000,
           normalOutputPressure: 3000,
-          pressrate: 1000, // psi/second
           setPower: function() {
             if(!hydSystemUI.switches.GreenHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.GreenHydElecPumpOnSwitch.states.Status) {
@@ -318,7 +343,6 @@ let hydSystemUI = {
           type: 'eng1',
           outputPressure: 3000,
           normalOutputPressure: 3000,
-          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.GreenHydEng1PumpSwitch.states.Status) {
@@ -340,7 +364,6 @@ let hydSystemUI = {
           type: 'eng2',
           outputPressure: 3000,
           normalOutputPressure: 3000,
-          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.GreenHydEng2PumpSwitch.states.Status) {
@@ -362,9 +385,7 @@ let hydSystemUI = {
           type: 'rat',
           outputPressure: 2500,
           normalOutputPressure: 2500,
-          pressrate: 1000, // psi/second
           setPower: function() {
-
             if(hydSystemUI.switches.RatSwitch.states.Push) {
               this.power = true;
             }
@@ -375,9 +396,9 @@ let hydSystemUI = {
     },
 
     Blue: {
-      pressure: 0,
-      pressureSensor: 'BlueHydPressureDisplay',
-      pressureLevelLow: 1450,
+      pressure: 0, // psi
+      pressureSensor: 'BlueHydPressureDisplay', // name of ECAM UI element
+      pressureLevelLow: 1450, // low pressure threshold
 
       hydPumps: {
 
@@ -387,7 +408,6 @@ let hydSystemUI = {
           autoSwitch: false,
           outputPressure: 3000,
           normalOutputPressure: 3000,
-          pressrate: 1000, // psi/second
           setPower: function() {
             if(!hydSystemUI.switches.BlueHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.BlueHydElecPumpOnSwitch.states.Status) {
@@ -406,7 +426,6 @@ let hydSystemUI = {
           type: 'eng1',
           outputPressure: 3000,
           normalOutputPressure: 3000,
-          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.BlueHydEng1PumpSwitch.states.Status) {
@@ -426,9 +445,9 @@ let hydSystemUI = {
     },
 
     Yellow: {
-      pressure: 0,
-      pressureSensor: 'YellowHydPressureDisplay',
-      pressureLevelLow: 1450,
+      pressure: 0, // psi
+      pressureSensor: 'YellowHydPressureDisplay', // name of ECAM UI element
+      pressureLevelLow: 1450, // low pressure threshold
 
       hydPumps: {
 
@@ -438,7 +457,6 @@ let hydSystemUI = {
           autoSwitch: false,
           outputPressure: 3000,
           normalOutputPressure: 3000,
-          pressrate: 1000, // psi/second
           setPower: function() {
             if(!hydSystemUI.switches.YellowHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.YellowHydElecPumpOnSwitch.states.Status) {
@@ -457,7 +475,6 @@ let hydSystemUI = {
           type: 'eng2',
           outputPressure: 3000,
           normalOutputPressure: 3000,
-          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.YellowHydEng2PumpSwitch.states.Status) {
@@ -479,7 +496,6 @@ let hydSystemUI = {
         //   type: 'hand',
         //   outputPressure: 3000,
         //   normalOutputPressure: 3000,
-        //   pressrate: 1000, // psi/second
         //   // setPower: function() {
         //   //   // just testing, actually put in logic!!!
         //   //   this.power = false;
@@ -489,6 +505,7 @@ let hydSystemUI = {
     },
   },
 
+  // engines object contains data for the engines
   engines: {
 
     eng1: {
@@ -530,7 +547,7 @@ let hydSystemUI = {
     const allEngineSwitches = Object.keys(this.engineSwitches);
     allEngineSwitches.forEach((thisEngineSwitch) => {
 
-      // Configure Cover based on initial conditions
+      // Configure switch based on initial conditions
       this.engineToggle(thisEngineSwitch);
         
       // Attach click events
@@ -538,8 +555,10 @@ let hydSystemUI = {
       getElement(thisEngineSwitch+'Off').addEventListener("click", () => this.engineToggle(thisEngineSwitch));
     });
 
-    // Continuously refresh UI
-    
+    // Continuously refresh UI and simulation
+    this.hsmu();
+    this.simulateHydLoops();
+    this.ecam();
     setInterval(() => {
       this.hsmu();
       this.simulateHydLoops();
@@ -547,8 +566,10 @@ let hydSystemUI = {
     }, 1000/this.refreshRate)
   },
 
+  // updateSwitch updates the UI elements to reflect the switch's states
   updateSwitch: function(switchName) {
 
+    // Check all states
     const switchStates = Object.keys(this.switches[switchName].states);
     switchStates.forEach((thisState) => {
 
@@ -560,6 +581,7 @@ let hydSystemUI = {
     });
   },
 
+  // switchPush executes when a switch is clicked
   switchPush: function(switchName) {
 
     if(this.switches[switchName].type === 'latch') {
@@ -570,6 +592,7 @@ let hydSystemUI = {
 
       this.switches[switchName].states.Push = true;
 
+      // unpush after a delay
       setTimeout(() => {
         this.switches[switchName].states.Push = false;
         this.updateSwitch(switchName);
@@ -579,6 +602,7 @@ let hydSystemUI = {
     this.updateSwitch(switchName);
   },
 
+  // coverToggle executes when a cover is clicked
   coverToggle: function(coverName) {
 
     this.covers[coverName].states.Cover = !this.covers[coverName].states.Cover;
@@ -592,6 +616,7 @@ let hydSystemUI = {
     }
   },
 
+  // engineToggle executes when an engine switch is clicked
   engineToggle: function(engineName) {
 
     this.engineSwitches[engineName].states.On = !this.engineSwitches[engineName].states.On;
@@ -654,7 +679,7 @@ let hydSystemUI = {
     }
   },
 
-  //
+  // simulateHydLoops contains the simluation logic for all three hydraulic loops
   simulateHydLoops: function() {
 
     // For all hyd loops
@@ -663,7 +688,6 @@ let hydSystemUI = {
 
       let maxPumpPressure = 0;
       let loopPressure = this.hydLoops[thisHydLoop].pressure;
-      let pressRate = 1000;
 
       // For all hyd loop pumps
       const allHydLoopPumps = Object.keys(this.hydLoops[thisHydLoop].hydPumps);
@@ -681,21 +705,16 @@ let hydSystemUI = {
         }
       });
 
-      if (Math.abs(maxPumpPressure - loopPressure) <= (1.5*pressRate/this.refreshRate) ) {
-
-      }
-
-      if(maxPumpPressure > loopPressure) {
-        this.hydLoops[thisHydLoop].pressure += (pressRate/this.refreshRate);
-      } else if(maxPumpPressure < loopPressure) {
-        this.hydLoops[thisHydLoop].pressure -= (pressRate)/this.refreshRate;
-      }
+      // Set loop pressure (asymptotically)
+      let pressRate = 0.8 * (maxPumpPressure - loopPressure); // psi / second, 0.8 just makes it look good, lol
+      this.hydLoops[thisHydLoop].pressure += (1 / this.refreshRate) * pressRate;
     });
   },
 
-  //
+  // ecam contains all logic for updating ECAM UI elements
   ecam: function() {
 
+    // For all hyd loops
     const allHydLoops = Object.keys(this.hydLoops);
     allHydLoops.forEach((thisHydLoop) => {
 
@@ -705,15 +724,16 @@ let hydSystemUI = {
         pressureHigh = false;
       }
 
-      // Set pressure display indicator
-      getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.textContent = this.hydLoops[thisHydLoop].pressure;
+      // Set pressure display indicator value and color
+      let pressure = Math.round(this.hydLoops[thisHydLoop].pressure / 50) * 50;
+      getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.textContent = pressure;
       if(pressureHigh) {
         getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamGreen);
       } else {
         getElement(this.hydLoops[thisHydLoop].pressureSensor).firstChild.setAttribute('fill', this.ecamAmber);
       }
 
-      // Set line pressure indicator
+      // Set loop line color
       if(pressureHigh) {
         getElement(thisHydLoop + 'HydLineHigh').style.display = 'inline';
         getElement(thisHydLoop + 'HydLineLow').style.display = 'none';
@@ -728,7 +748,7 @@ let hydSystemUI = {
 
         let pumpType = this.hydLoops[thisHydLoop].hydPumps[thisHydPump].type;
 
-        // Set elec and rat pump indicators
+        // Set elec and rat pump power indicators
         if(pumpType === 'elec' || pumpType === 'rat') {
 
           if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].power) {
@@ -748,7 +768,7 @@ let hydSystemUI = {
           }
         }
 
-        // Set engine 1 pump indicators
+        // Set engine pump power indicators
         if(pumpType === 'eng1' || pumpType === 'eng2') {
 
           if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].power) {
@@ -769,7 +789,7 @@ let hydSystemUI = {
           }
         }
 
-        // Set engine indicators
+        // Set engine numer color
         if(this.engines.eng1.running) {
           getElement('Eng1Ind').firstChild.setAttribute('fill', 'white');
         } else {
@@ -803,21 +823,21 @@ class UI extends React.Component {
     this.state = {};
   }
 
-  // componentDidMount 
+  // componentDidMount runs after component mounts
   componentDidMount() {
 
     // Set page attributes
     document.body.style = 'background: #2b363b;';
     document.title = 'A330 Hydraulic System';
 
-    // // Initialize imported SVG
+    // Initialize imported SVG
     hydSystemUI.init();
 
     // Refresh to draw new elements
     this.setState({});
   }
 
-  // render
+  // render draws the UI elements on the screen
   render() {
     
     return (

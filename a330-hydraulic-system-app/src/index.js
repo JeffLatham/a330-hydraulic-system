@@ -24,9 +24,9 @@ function getElement(elementID) {
 // // Default View object
 let hydSystemUI = {
 
-  refreshRate: 10, // Hz
+  refreshRate: 10, // Hz, refresh rate for the entire UI and simulation
 
-  airspeed: 250, // KIAS
+  airspeed: 250, // KIAS, indicated airspeed
 
   ecamGreen:  '#00fd3d',
   ecamAmber: '#fda300',
@@ -299,6 +299,7 @@ let hydSystemUI = {
           autoSwitch: false,
           outputPressure: 3000,
           normalOutputPressure: 3000,
+          pressrate: 1000, // psi/second
           setPower: function() {
             if(!hydSystemUI.switches.GreenHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.GreenHydElecPumpOnSwitch.states.Status) {
@@ -317,6 +318,7 @@ let hydSystemUI = {
           type: 'eng1',
           outputPressure: 3000,
           normalOutputPressure: 3000,
+          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.GreenHydEng1PumpSwitch.states.Status) {
@@ -338,6 +340,7 @@ let hydSystemUI = {
           type: 'eng2',
           outputPressure: 3000,
           normalOutputPressure: 3000,
+          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.GreenHydEng2PumpSwitch.states.Status) {
@@ -359,6 +362,7 @@ let hydSystemUI = {
           type: 'rat',
           outputPressure: 2500,
           normalOutputPressure: 2500,
+          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(hydSystemUI.switches.RatSwitch.states.Push) {
@@ -383,6 +387,7 @@ let hydSystemUI = {
           autoSwitch: false,
           outputPressure: 3000,
           normalOutputPressure: 3000,
+          pressrate: 1000, // psi/second
           setPower: function() {
             if(!hydSystemUI.switches.BlueHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.BlueHydElecPumpOnSwitch.states.Status) {
@@ -401,6 +406,7 @@ let hydSystemUI = {
           type: 'eng1',
           outputPressure: 3000,
           normalOutputPressure: 3000,
+          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.BlueHydEng1PumpSwitch.states.Status) {
@@ -432,6 +438,7 @@ let hydSystemUI = {
           autoSwitch: false,
           outputPressure: 3000,
           normalOutputPressure: 3000,
+          pressrate: 1000, // psi/second
           setPower: function() {
             if(!hydSystemUI.switches.YellowHydElecPumpOffSwitch.states.Status) {
               if(this.autoSwitch || hydSystemUI.switches.YellowHydElecPumpOnSwitch.states.Status) {
@@ -450,6 +457,7 @@ let hydSystemUI = {
           type: 'eng2',
           outputPressure: 3000,
           normalOutputPressure: 3000,
+          pressrate: 1000, // psi/second
           setPower: function() {
 
             if(!hydSystemUI.switches.YellowHydEng2PumpSwitch.states.Status) {
@@ -471,6 +479,7 @@ let hydSystemUI = {
         //   type: 'hand',
         //   outputPressure: 3000,
         //   normalOutputPressure: 3000,
+        //   pressrate: 1000, // psi/second
         //   // setPower: function() {
         //   //   // just testing, actually put in logic!!!
         //   //   this.power = false;
@@ -500,7 +509,7 @@ let hydSystemUI = {
 
       // Configure Switch based on initial conditions
       this.updateSwitch(thisSwitch);
-        
+      
       // Attach click event
       getElement(thisSwitch+'Button').addEventListener("click", () => this.switchPush(thisSwitch));
     });
@@ -637,7 +646,10 @@ let hydSystemUI = {
     }
 
     // Deploy RAT
-    if(!this.engines.eng1.running && !this.engines.eng2.running && this.airspeed > 100) {
+    if(!this.engines.eng1.running && 
+       !this.engines.eng2.running && 
+       this.airspeed > 100 && 
+       !this.hydLoops.Green.hydPumps.GreenHydRatPump.power) {
       this.switchPush('RatSwitch');
     }
   },
@@ -649,7 +661,9 @@ let hydSystemUI = {
     const allHydLoops = Object.keys(this.hydLoops);
     allHydLoops.forEach((thisHydLoop) => {
 
-      let pressure = 0;
+      let maxPumpPressure = 0;
+      let loopPressure = this.hydLoops[thisHydLoop].pressure;
+      let pressRate = 1000;
 
       // For all hyd loop pumps
       const allHydLoopPumps = Object.keys(this.hydLoops[thisHydLoop].hydPumps);
@@ -661,13 +675,21 @@ let hydSystemUI = {
 
         if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].power) {
           
-          if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].outputPressure > pressure) {
-            pressure = this.hydLoops[thisHydLoop].hydPumps[thisHydPump].outputPressure;
+          if(this.hydLoops[thisHydLoop].hydPumps[thisHydPump].outputPressure > maxPumpPressure) {
+            maxPumpPressure = this.hydLoops[thisHydLoop].hydPumps[thisHydPump].outputPressure;
           }
         }
       });
 
-      this.hydLoops[thisHydLoop].pressure = pressure;
+      if (Math.abs(maxPumpPressure - loopPressure) <= (1.5*pressRate/this.refreshRate) ) {
+
+      }
+
+      if(maxPumpPressure > loopPressure) {
+        this.hydLoops[thisHydLoop].pressure += (pressRate/this.refreshRate);
+      } else if(maxPumpPressure < loopPressure) {
+        this.hydLoops[thisHydLoop].pressure -= (pressRate)/this.refreshRate;
+      }
     });
   },
 
@@ -761,6 +783,13 @@ let hydSystemUI = {
         }
       });
     });
+
+    // Set zulu time
+    let zuluTime = new Date();
+    let zuluHours = zuluTime.getUTCHours();
+    let zuluMinutes = zuluTime.getUTCMinutes();
+    getElement('ZuluHours').firstChild.textContent = zuluHours;
+    getElement('ZuluMinutes').firstChild.textContent = zuluMinutes;
   }
 };
 
@@ -777,6 +806,10 @@ class UI extends React.Component {
   // componentDidMount 
   componentDidMount() {
 
+    // Set page attributes
+    document.body.style = 'background: #2b363b;';
+    document.title = 'A330 Hydraulic System';
+
     // // Initialize imported SVG
     hydSystemUI.init();
 
@@ -789,7 +822,14 @@ class UI extends React.Component {
     
     return (
       <div>
-        <HydSystemUI />
+        <HydSystemUI style={{
+            position:'absolute',
+            left: 0 + 'px',
+            top: 0 + 'px',
+            width: '100%',
+            height: '100%',
+          }} 
+        />
       </div>
     );
   }

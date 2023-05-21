@@ -313,7 +313,7 @@ let hydSystemUI = {
     // It is called externally from simulateHydLoops().
 
     Green: {
-      pressure: 0, // psi
+      pressure: 900, // psi
       pressureSensor: 'GreenHydPressureDisplay', // name of ECAM UI element
       pressureLevelLow: 1450, // low pressure threshold
 
@@ -445,7 +445,7 @@ let hydSystemUI = {
     },
 
     Yellow: {
-      pressure: 0, // psi
+      pressure: 2730, // psi
       pressureSensor: 'YellowHydPressureDisplay', // name of ECAM UI element
       pressureLevelLow: 1450, // low pressure threshold
 
@@ -808,12 +808,8 @@ let hydSystemUI = {
     let zuluTime = new Date();
     let zuluHours = zuluTime.getUTCHours();
     let zuluMinutes = zuluTime.getUTCMinutes();
-    if(zuluHours < 10) {
-      zuluHours = '0' + zuluHours;
-    }
-    if(zuluMinutes < 10) {
-      zuluMinutes = '0' + zuluMinutes;
-    }
+    if(zuluHours    < 10) { zuluHours   = '0' + zuluHours;   }
+    if(zuluMinutes  < 10) { zuluMinutes = '0' + zuluMinutes; }
     getElement('ZuluHours').firstChild.textContent = zuluHours;
     getElement('ZuluMinutes').firstChild.textContent = zuluMinutes;
   }

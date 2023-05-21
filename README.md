@@ -19,5 +19,5 @@ Systems that are NOT simulated:
 - all downstream systems powered by the hydraulics loops (ailerons, flaps, etc.).
 - hydraulics reservoirs (fluid levels, pressures, temperatures)
 - engine fire valves
-- various other systems that effect hydraulic system logic (landing gear lever, flap lever, etc.)
+- various other systems that affect hydraulic system logic (landing gear lever, flap lever, etc.)
 - anything not included in the list of "Systems that are simulated".

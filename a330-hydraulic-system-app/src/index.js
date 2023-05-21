@@ -808,6 +808,12 @@ let hydSystemUI = {
     let zuluTime = new Date();
     let zuluHours = zuluTime.getUTCHours();
     let zuluMinutes = zuluTime.getUTCMinutes();
+    if(zuluHours < 10) {
+      zuluHours = '0' + zuluHours;
+    }
+    if(zuluMinutes < 10) {
+      zuluMinutes = '0' + zuluMinutes;
+    }
     getElement('ZuluHours').firstChild.textContent = zuluHours;
     getElement('ZuluMinutes').firstChild.textContent = zuluMinutes;
   }
